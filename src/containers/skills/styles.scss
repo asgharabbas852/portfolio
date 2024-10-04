@@ -1,0 +1,105 @@
+.skills {
+    &__content-wrapper {
+      display: flex;
+      padding: 30px;
+      gap: 30px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between; // Ensure space is utilized properly
+      align-content: center;
+    }
+  
+    &__inner-Content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 100%; // Ensures that content doesn't exceed container size on smaller screens
+    }
+  
+    .skills__content-wrapper__innerContent__category-text{
+      display: inline-block;
+      color: var(--yellow-theme-main-color);
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1rem;
+      letter-spacing: 0.5px;
+      position: relative;
+      text-transform: uppercase;
+      padding: 5px 10px;
+      border-bottom: 2px solid var(--yellow-theme-main-color);
+     // padding-left: 50px;
+      
+    }
+  
+    .skills__content-wrapper__innerContent__category-text::before,
+    .skills__content-wrapper__innerContent__category-text::after {
+      position: absolute;
+      content: '';
+      width: 2px;
+      height: 5px;
+      background-color: var(--yellow-theme-main-color);
+      bottom: -1px;
+     
+    }
+  
+    .skills__content-wrapper__innerContent__category-text::before {
+      left: 0;
+    }
+  
+    .skills__content-wrapper__innerContent__category-text::after {
+      right: 0;
+    }
+  
+    .progressbar__wrapper {
+      padding: 30px 0px 30px 0px;
+    }
+  
+    p {
+      font-size: 1.8rem;
+      margin: 20px 0px 0px;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: var(--yellow-theme-sub-text-color);
+    }
+  
+    
+    @media only screen and (max-width: 1024px) {
+      &__content-wrapper {
+        padding: 20px; 
+        gap: 20px;
+      }
+    }
+  
+    @media only screen and (max-width: 768px) {
+      &__content-wrapper {
+        flex-direction: column; 
+        padding: 20px;
+        gap: 15px; 
+      }
+      .skills__inner-Content {
+        max-width: 100%; 
+      }
+      .progressbar__wrapper {
+        padding: 50px 20px 30px 0; 
+      }
+    }
+  
+    @media only screen and (max-width: 480px) {
+      .skills__content-wrapper {
+        padding: 15px;
+        gap: 10px;
+      }
+      .skills__content-wrapper__innerContent__category-text {
+        font-size: 18px; 
+        padding: 3px 8px; 
+      }
+      .progressbar__wrapper {
+        padding: 30px 10px 20px 0; 
+      }
+      p {
+        font-size: 1rem; 
+      }
+    }
+  }
+  
