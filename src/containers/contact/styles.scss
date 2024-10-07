@@ -107,7 +107,7 @@
   .contact__content__form__controlswrapper {
     grid-template-columns: 1fr;
     gap: 20px;
-    /* Wrap content */
+    
     
   }
 
@@ -128,7 +128,7 @@
     .contact__content__form__controlswrapper {
       gap: 20px;
       grid-template-columns: 1fr;
-      /* Ensuring proper wrapping */
+  
       grid-auto-flow: row;
 
       div {
